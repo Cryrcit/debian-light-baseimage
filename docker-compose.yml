@@ -1,0 +1,24 @@
+version: '3.5'
+
+volumes:
+  debian-light-baseimage:
+    driver: local
+
+services:
+  debian-multi-baseimage:
+    build:
+      context: ./example/multiple-process-image/
+      args:
+        - DEBIAN_VERSION=${DEBIAN_VERSION}
+        - WEBSERVER=${WEBSERVER}
+    container_name: debian-web-light-baseimage-${WEBSERVER}
+#   environment:
+#     DEBIAN_VERSION: ${DEBIAN_VERSION}
+#     
+    tty: true
+    stdin_open: true
+#   volumes:
+#     - ./share:/mnt/share
+#   ports:
+#     - "5080:80"
+#     - "5443:443"
