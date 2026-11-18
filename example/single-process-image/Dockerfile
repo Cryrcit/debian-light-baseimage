@@ -1,6 +1,8 @@
 # Use cryrcit/debian-light-baseimage
 # https://github.com/cryrcit/debian-light-baseimage
-FROM cryrcit/debian-light-baseimage:13.1.0
+ARG DEBIAN_VERSION
+
+FROM cryrcit/debian-light-baseimage:${DEBIAN_VERSION}
 
 # Download nginx from apt-get and clean apt-get files
 RUN apt-get -y update \

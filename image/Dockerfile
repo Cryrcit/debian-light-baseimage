@@ -1,4 +1,4 @@
-FROM debian:trixie-slim
+FROM debian:13-slim
 
 LABEL org.opencontainers.image.authors="project@cryrc.it"
 
