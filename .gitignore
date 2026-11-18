@@ -1,0 +1,14 @@
+# Environment variables and secrets
+.env
+.env.*
+publish-github.sh
+!.env.example
+
+# Docker
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
