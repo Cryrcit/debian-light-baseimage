@@ -3,6 +3,7 @@
 .env.*
 publish-github.sh
 !.env.example
+share/
 
 # Docker
 *.log
